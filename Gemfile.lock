@@ -106,11 +106,6 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
-    haml-rails (2.1.0)
-      actionpack (>= 5.1)
-      activesupport (>= 5.1)
-      haml (>= 4.0.6)
-      railties (>= 5.1)
     html2haml (2.3.0)
       erubis (~> 2.7.0)
       haml (>= 4.0)
@@ -278,7 +273,6 @@ DEPENDENCIES
   debug
   font-awesome-sass (~> 6.4.0)
   haml
-  haml-rails
   html2haml
   importmap-rails
   jbuilder
