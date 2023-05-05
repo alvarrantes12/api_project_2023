@@ -1,6 +1,6 @@
 .div.m-4
   %h1.mb-4
-    = "Crud disponibles"
+    = t('application.list_of', model: t('application.cruds_available'))
 
 .float-start.m-4
-  = link_to "Contenidos", root_path, class: 'btn btn-danger'
+  = link_to "Cambiar al crud disponible", root_path, class: 'btn btn-danger'

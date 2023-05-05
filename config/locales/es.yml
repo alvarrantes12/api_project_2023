@@ -1,0 +1,17 @@
+es:
+  application:
+    list_of: Lista del %{model}
+    new_model: Nuevo %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    cruds_available: tema disponible
+  activerecord:
+    attributes:
+
+    modules:
+
+    errors:
+      blank: es un campo requerido
