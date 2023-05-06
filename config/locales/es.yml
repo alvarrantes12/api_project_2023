@@ -2,16 +2,33 @@ es:
   application:
     list_of: Lista del %{model}
     new_model: Nuevo %{model}
+    edit_model: Editar %{model}
+    destroy_model: Destruir %{model}
+    create_message: "%{model} creado con exito" 
+    update_message: "%{model} actualizado con exito" 
+    delete_message: "%{model} eliminado con exito" 
     show: Mostrar
     edit: Editar
     save: Guardar
     delete: Eliminar
     create: Crear
-    cruds_available: tema disponible
+    cruds_available: Tema disponible
+    can_not_be_saved: No se pudo guardar
+    select: Seleccione
+    back: Atrás
   activerecord:
     attributes:
+      director:
+        first_name: Nombre
+        last_name: Apellido
 
     modules:
+      director:
+        one: Director
+        other: Directores
 
     errors:
       blank: es un campo requerido
+      required_error_model: Se requiere un %{model} para continuar
+      minimum_long_error_model: El %{model} es demasiado corto
+      maximum_long_error_model: El %{model} no debe superar los 10 caracteres
