@@ -7,11 +7,30 @@ es:
     save: Guardar
     delete: Eliminar
     create: Crear
+    back: Atrás
     cruds_available: tema disponible
+    can_not_be_saved: No se pudo guardar
   activerecord:
     attributes:
-
+      director:
+        first_name: Primer nombre
+        last_name: Apellido
     modules:
-
+      director:
+        one: Director
+        other: Directores
     errors:
-      blank: es un campo requerido
+      models:
+        director:
+          attributes:
+            first_name:
+              blank: es un campo requerido
+              too_short: debe tener mas de 3 letras
+            last_name:
+              blank: es un campo requerido
+              too_short: debe tener mas de 3 letras
+              too_long: debe tener menos de 10 letras
+    success:
+      create: Director correctamente creado
+      edit: Director correctamente modificado
+      delete: Director correctamente eliminado
