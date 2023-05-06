@@ -1,10 +1,16 @@
-%h1 Listing directors
+%p{:style => "color: green"}= notice
+.div.m-4
+  .page.header 
+    %h1.mb-4
+      = t('application.list_of', model: t('activerecord.modules.director.other'))
+    .float-end.pb-4
+      = link_to t('application.create'), new_director_path, class: "btn btn-primary"
 
-%table
-  %thead
+%table.table.table-striped
+  %thread
     %tr
-      %th First name
-      %th Last name
+      %th= t('activerecord.attributes.content.first_name')
+      %th= t('activerecord.attributes.content.last_name')
       %th
       %th
       %th
@@ -14,10 +20,8 @@
       %tr
         %td= director.first_name
         %td= director.last_name
-        %td= link_to 'Show', director
-        %td= link_to 'Edit', edit_director_path(director)
-        %td= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('application.show'), director, class: "btn btn-info"
+        %th= link_to t('application.edit'), edit_director_path(director), class: "btn btn-success"
+        %th= link_to t('application.delete'), director, class: "btn btn-danger"
 
 %br
-
-= link_to 'New Director', new_director_path
