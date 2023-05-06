@@ -8,6 +8,11 @@ es:
     delete: Eliminar
     create: Crear
     cruds_available: tema disponible
+    back: Atrás
+    edit: Editar
+    created: Creado exitosamente
+    updated: Actualizado exitosamente
+    destroyed: Eliminado correctamente
   activerecord:
     attributes:
 

@@ -1,0 +1,23 @@
+%h1 Listing directors
+
+%table
+  %thead
+    %tr
+      %th First name
+      %th Last name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @directors.each do |director|
+      %tr
+        %td= director.first_name
+        %td= director.last_name
+        %td= link_to 'Show', director
+        %td= link_to 'Edit', edit_director_path(director)
+        %td= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Director', new_director_path
