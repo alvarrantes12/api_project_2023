@@ -8,10 +8,21 @@ es:
     delete: Eliminar
     create: Crear
     cruds_available: tema disponible
+    back: Atrás
+    save: Guardar
+    director: Director
+    created: Creado exitosamente
+    updated: Editado exitosamente
+    deleted: Borrado exitosamente
   activerecord:
     attributes:
-
+      director:
+        first_name: Nombre
+        last_name: Apellido
     modules:
-
+      director:
+        one: Director
+        other: Directores
     errors:
       blank: es un campo requerido
+      can_not_be_saved: No se pudo guardar
