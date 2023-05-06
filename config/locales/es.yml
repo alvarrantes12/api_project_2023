@@ -1,17 +1,40 @@
 es:
   application:
-    list_of: Lista del %{model}
-    new_model: Nuevo %{model}
+    list_of: Lista de %{model}
+    new_model: Crear %{model}
+    edit_model: Editar %{model}
+    back_model: Volver a la lista de %{model}
+    delete_model: Eliminar %{model}
+    show_model: Mostrar %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
     delete: Eliminar
-    create: Crear
-    cruds_available: tema disponible
+    create: crear
+    cruds_available: CRUDS disponibles
+    can_not_be_saved: No se pudo guardar
+    select: Seleccione
+    back: Atrás
+    crud_message:
+      male:
+        create_message_model: "%{model} creado"
+        update_message_model: "%{model} actualizado"
+        delete_message_model: "%{model} eliminado"
+      female:
+        create_message_model: "%{model} creada"
+        update_message_model: "%{model} actualizada"
+        delete_message_model: "%{model} eliminada"
   activerecord:
     attributes:
-
+      director:
+        first_name: Nombre
+        last_name: Apellido
     modules:
-
+      director:
+        one: Director
+        other: Directores
     errors:
-      blank: es un campo requerido
+      required_error_model: "Se requiere %{model} para continuar"
+      maximum_long_error_model: El %{model} debe tener como máximo 10 caracteres
+      minimum_long_error_model: El %{model} debe tener como mínimo 3 caracteres
+      uniqueness_error_model: El %{model} debe ser único
