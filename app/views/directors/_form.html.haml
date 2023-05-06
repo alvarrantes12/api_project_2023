@@ -1,0 +1,26 @@
+= form_for @director do |f|
+  - if @director.errors.any?
+    .card.mx-4
+      .card-body
+        %div{style: 'color: red'}
+          %h2
+            = t('application.error')
+          %ul
+            -  @director.errors.each do |error|
+              %li= error.full_message
+
+  .form-group.mx-4
+    = f.label :first_name, class: "form-label required"
+    .dev.w-25
+      = f.text_field :first_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :last_name, class: "form-label required"
+    .dev.w-25
+      = f.text_area :last_name, autofocus: true, class: "form-control"
+  
+  .row.mt-4
+    .offset-3.col-3
+      = link_to t('application.back'), directors_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"

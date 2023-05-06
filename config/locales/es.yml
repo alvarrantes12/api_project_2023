@@ -1,17 +1,36 @@
 es:
   application:
-    list_of: Lista del %{model}
+    list_of: Lista de %{model}
     new_model: Nuevo %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
+    back: Atras
     delete: Eliminar
     create: Crear
     cruds_available: tema disponible
+    error: Error !!
+    created: Creado Exitosamente
+    edited: Actualizado Exitosamente
+    destroyed: Borrado Exitosamente
   activerecord:
     attributes:
-
+      director:
+        first_name: Nombre
+        last_name: Apellido
     modules:
-
+      director:
+        new: Nuevo Director
+        edit: Editando Director
+        one: Director
+        other: Directores
     errors:
-      blank: es un campo requerido
+      models:
+        director:
+          attributes:
+            first_name:
+              blank: vacío
+              too_short: no cumple con el minimo de caracteres
+            last_name: 
+              blank: vacío
+              too_short: no cumple con el maximo de caracteres 
