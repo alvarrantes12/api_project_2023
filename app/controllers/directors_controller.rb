@@ -17,7 +17,7 @@ class DirectorsController < ApplicationController
     @director = Director.new(director_params)
 
     if @director.save
-      redirect_to director_url(@director), notice: t(application.created)
+      redirect_to director_url(@director), notice: t('application.created')
     else
       render :new, status: :unprocessable_entity 
     end
@@ -25,7 +25,7 @@ class DirectorsController < ApplicationController
 
   def update
       if @director.update(director_params)
-        redirect_to director_url(@director), notice: t(application.updated)
+        redirect_to director_url(@director), notice: t('application.updated')
       else
         render :edit, status: :unprocessable_entity
       end
@@ -33,7 +33,7 @@ class DirectorsController < ApplicationController
 
   def destroy
     @director.destroy
-    redirect_to directors_url, notice: t(application.destroyed)
+    redirect_to directors_url, notice: t('application.destroyed')
   end
 
   private
