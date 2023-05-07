@@ -1,5 +1,8 @@
 es:
   application:
+    destroyed: Se eliminó un director
+    updated: Se editó un director
+    created: Se creó un director
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
     show: Mostrar
