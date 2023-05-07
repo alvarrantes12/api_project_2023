@@ -34,7 +34,7 @@ class DirectorsController < ApplicationController
   def destroy
     @director.destroy
 
-    redirect_to directors_url, notice: "Director was successfully destroyed."
+    redirect_to directors_url, notice: t('application.deleted')
   end
 
   private
