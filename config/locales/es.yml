@@ -1,13 +1,14 @@
 es:
   application:
-    list_of: Lista del %{model}
+    list_of: Lista de %{model}
     new_model: Nuevo %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
     delete: Eliminar
     create: Crear
-    cruds_available: tema disponible
+    cruds_available: Tema disponible
+    can_not_be_saved: No se pudo guardar
     back: Atrás
     edit: Editar
     created: Creado exitosamente
@@ -15,8 +16,24 @@ es:
     destroyed: Eliminado correctamente
   activerecord:
     attributes:
+      director:
+        first_name: Nombre
+        last_name: Apellido
 
     modules:
+      director:
+        one: Director
+        other: Directores
 
     errors:
       blank: es un campo requerido
+      models:
+        director:
+          attributes:
+            first_name:
+              blank: es un campo requerido
+              too_short: es muy corto
+            last_name: 
+              blank: es un campo requerido
+              too_long: es muy largo
+              too_short: es muy corto

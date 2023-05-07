@@ -1,6 +1,6 @@
 .div.m-4
   %h1.mb-4
-    = t('application.list_of', model: t('application.cruds_available'))
+    = t('application.cruds_available')
 
 .float-start.m-4
-  = link_to "Cambiar al crud disponible", root_path, class: 'btn btn-danger'
+  = link_to t('activerecord.modules.director.other'), directors_path, class: 'btn btn-info'
