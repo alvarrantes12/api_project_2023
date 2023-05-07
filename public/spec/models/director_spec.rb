@@ -26,8 +26,7 @@ RSpec.describe Director, type: :model do
   end
 
   it "is not valid with a last_name with more than 10 letters" do
-    subject.last_name = "Jojajajajajajaaakaai"
+    subject.last_name = "Ajfkdjfksjfksdfdfsd"
     expect(subject).to_not be_valid
   end
-
 end

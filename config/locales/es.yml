@@ -26,3 +26,5 @@ es:
     errors:
       blank: es un campo requerido
       can_not_be_saved: No se pudo guardar
+      too_long: es muy largo
+      too_short: es muy corto
