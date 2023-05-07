@@ -18,7 +18,7 @@ es:
     attributes:
       director:
         first_name: Primer nombre
-        last_name: Segundo nombre
+        last_name: Apellido
     modules:
       director:
         one: Director
