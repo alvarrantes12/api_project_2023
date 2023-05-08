@@ -21,8 +21,7 @@ class MediaContentsController < ApplicationController
     if @media_content.save
       render 'api/media_contents/show', status: :created
     else
-      errors = validate
-      render json: errors, status: :unprocessable_entity 
+      render json: @media_content.errors, status: :unprocessable_entity 
     end
   end
 
@@ -30,8 +29,7 @@ class MediaContentsController < ApplicationController
     if @media_content.update(media_content_params)
       render 'api/media_contents/show', status: :ok
     else
-      errors = validate
-      render json: errors, status: :unprocessable_entity
+      render json: @media_content.errors, status: :unprocessable_entity
     end
   end
 
@@ -48,19 +46,6 @@ class MediaContentsController < ApplicationController
 
     def media_content_params
       params.require(:media_content).permit(:name, :director_id)
-    end
-
-    def validate
-      errors = {}
-    
-      if @media_content.name.blank?
-        errors[:name] = t('activerecord.errors.blank', model: t('activerecord.attributes.media_content.name'))
-      end
-      if !Director.exists?(@media_content.director_id)
-        errors[:director_id] = t('activerecord.errors.required_error_model', model: t('activerecord.attributes.media_content.director_id'))
-      end
-      return errors
-    end
-    
+    end 
 end
 end

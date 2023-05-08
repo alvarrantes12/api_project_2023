@@ -29,8 +29,19 @@ es:
         one: Director
         other: Directores
     errors:
-      blank: El espacio esta en blanco, se requiere un %{model} para continuar
-      required_error_model: Se requiere un %{model} correcto para continuar
-      minimum_long_error_model: El %{model} es demasiado corto
-      maximum_long_error_model: El %{model} no debe superar los 10 caracteres
- 
+      models:
+        director:
+          attributes:
+            first_name:
+              blank: El espacio esta en blanco
+              too_short: Debe tener minimo de 3 caracteres
+            last_name:
+              blank: El espacio esta en blanco
+              too_short: Debe tener minimo de 3 caracteres
+              too_long: Debe de tener un maximo de 10 caracteres
+        media_content:
+          attributes:
+            director: 
+              required: Se requiere un valor correcto para continuar
+            name: 
+              blank: El espacio esta en blanco

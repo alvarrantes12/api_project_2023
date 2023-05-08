@@ -6,7 +6,7 @@
           %h2
             = t('application.can_not_be_saved')
           %ul
-          - @errors.each do |error|
+          - @director.errors.full_messages.each do |error|
             %li= error
 
   .form-group.mx-4
