@@ -21,14 +21,16 @@ es:
       director:
         first_name: Nombre
         last_name: Apellido
-
+      media_content:
+        name: Nombre
+        director_id: ID Director
     modules:
       director:
         one: Director
         other: Directores
-
     errors:
-      blank: es un campo requerido
-      required_error_model: Se requiere un %{model} para continuar
+      blank: El espacio esta en blanco, se requiere un %{model} para continuar
+      required_error_model: Se requiere un %{model} correcto para continuar
       minimum_long_error_model: El %{model} es demasiado corto
       maximum_long_error_model: El %{model} no debe superar los 10 caracteres
+ 

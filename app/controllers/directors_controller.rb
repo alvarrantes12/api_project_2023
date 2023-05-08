@@ -54,7 +54,7 @@ class DirectorsController < ApplicationController
   
       [:first_name, :last_name].each do |attribute|
         if @director.send(attribute).blank?
-          errors.push(t('activerecord.errors.required_error_model', model: t("activerecord.attributes.director.#{attribute}")))
+          errors.push(t('activerecord.errors.blank', model: t("activerecord.attributes.director.#{attribute}")))
         elsif @director.send(attribute).length < 3
           errors.push(t('activerecord.errors.minimum_long_error_model', model: t("activerecord.attributes.director.#{attribute}")))
         elsif @director.send(attribute).length > 10 && @director.send(attribute) ==  @director.last_name
