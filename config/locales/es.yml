@@ -13,7 +13,9 @@ es:
     update: Actualizado correctamente
     destroy: Eliminado correctamente
     cruds_available: tema disponible
+    cannot_be_saved: No se puede crear el directorio
     prohibited_create: prohiben la creación de un nuevo Directorio
+    cruds_model: CRUDs Api
   activerecord:
     attributes:
      director:
@@ -25,14 +27,16 @@ es:
       one: Directorio
       other: Directorios
     errors:
-     modules:
-      director:
-       attributes:
-        firs_name:
-         blank: Campo requerido
-         too_short: Minimo debe tener 3 caracteres
-        last_name:
-         blank: Campo requerido
-         too_short: Como minimo debe tener 3 caracteres
-         too_long: Como maximo puede tener 10 caracteres  
-      blank: es un campo requerido
+      models:
+        director:
+          attributes:
+            first_name:
+              blank: no puede ser un campo vacio
+              too_short: debe tener minimo 3 caracteres
+              too_long: debe tener como maximo 10 caracteres
+            last_name:
+              blank: no puede ser un campo vacio
+              too_short: debe tener minimo 3 caracteres
+              too_long: debe tener como maximo 10 caracteres
+
+
