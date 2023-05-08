@@ -33,7 +33,8 @@ class DirectorsController < ApplicationController
 
   def destroy
     @director.destroy
-      redirect_to directors_url, notice: t('application.destroy')
+      redirect_to directors_url, notice: t('application.destroy') 
+
     end
   end
 
@@ -45,4 +46,4 @@ class DirectorsController < ApplicationController
     def director_params
       params.require(:director).permit(:first_name, :last_name)
     end
-end
+

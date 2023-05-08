@@ -2,6 +2,7 @@ es:
   application:
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
+    edit_model: Editar %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
@@ -12,6 +13,7 @@ es:
     update: Actualizado correctamente
     destroy: Eliminado correctamente
     cruds_available: tema disponible
+    prohibited_create: prohiben la creación de un nuevo Directorio
   activerecord:
     attributes:
      director:
