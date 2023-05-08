@@ -1,0 +1,5 @@
+%h1= t('application.new_model', model:t('activerecord.modules.director.one'))
+= render "form", director: @director
+%br/
+%div
+  = link_to t('application.back'), directors_path
