@@ -1,0 +1,16 @@
+= form_for @director do |f|
+  - if @director.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@director.errors.count, "error")} prohibited this director from being saved:"
+      %ul
+        - @director.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .actions
+    = f.submit 'Save'
