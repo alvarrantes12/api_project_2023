@@ -7,7 +7,7 @@
             = t('application.can_not_be_saved')
           %ul
           - @director.errors.full_messages.each do |error|
-            %li= f.object.class.human_attribute_name(error.split(' ').first) + ' ' + error.split(' ').drop(1).join(' ')
+            %li= error
 
   .form-group.mx-4
     = f.label :first_name, class: "form-label required"
