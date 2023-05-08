@@ -25,7 +25,8 @@ es:
             first_name:
               blank: es un campo requerido
               too_short: es muy corto
+              too_long: es muy largo
             last_name: 
               blank: es un campo requerido
-              too_short: es muy corto
+              too_long: es muy largo
       blank: es un campo requerido
