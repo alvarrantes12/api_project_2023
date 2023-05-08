@@ -1,4 +1,4 @@
-module API
+module Api
   class MediaContentsController < ApplicationController
     skip_before_action :verify_authenticity_token
     before_action :set_media_content, only: %i[ show edit update destroy ]
