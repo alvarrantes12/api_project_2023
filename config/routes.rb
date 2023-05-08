@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :directors
 
   scope module: :api do
-    resource :media_contents
+    resources :media_contents
   end
 
   root "dashboards#index"
