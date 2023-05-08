@@ -1,17 +1,41 @@
 es:
   application:
     list_of: Lista del %{model}
-    new_model: Nuevo %{model}
+    new_model: Nuevos %{model}
     show: Mostrar
     edit: Editar
     save: Guardar
     delete: Eliminar
     create: Crear
     cruds_available: tema disponible
+    can_not_be_save: No se pudo guardar
+    created: Creado exitosamente
+    destroyed: Eliminado de forma exitosa
+    updated: Editado de forma exitosa
+    first_name_blank: Espacio en blanco
   activerecord:
     attributes:
+      director:
+        first_name: Nombre 
+        last_name: Apellido
+    other: Crud API
+        
 
     modules:
+      peliculas:
+        director: Directores
 
     errors:
-      blank: es un campo requerido
+       models:
+        director:
+          attributes:
+            first_name: 
+              blank: "Falta el nombre"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            last_name:
+              blank: "Falta el apellido"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            code: 
+              blank: "Falta el nombre"
