@@ -34,7 +34,12 @@ es:
         one: Director
         other: Directores
     errors:
-      required_error_model: "Se requiere %{model} para continuar"
-      maximum_long_error_model: El %{model} debe tener como máximo 10 caracteres
-      minimum_long_error_model: El %{model} debe tener como mínimo 3 caracteres
-      uniqueness_error_model: El %{model} debe ser único
+      models:
+        director:
+          attributes:
+            first_name:
+              blank: "no puede estar en blanco"
+              too_short: "debe de tener minimo 3 caracteres"
+            last_name:
+              blank: "no puede estar en blanco"
+              too_short: "debe de tener minimo 3 caracteres"
