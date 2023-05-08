@@ -8,9 +8,12 @@ es:
     delete: Eliminar
     create: Crear
     cruds_available: tema disponible
+    created: Creado exitosamente
   activerecord:
     attributes:
-
+      director:
+        first_name: Nombre
+        last_name: Apellido
     modules:
 
     errors:

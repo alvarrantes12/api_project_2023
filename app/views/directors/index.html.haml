@@ -1,0 +1,26 @@
+%p
+%h1.mb-4 Listing directors
+.div.m-4 
+  .page.header  
+    %h1.mb-4
+    .float-end.pb-4
+    = link_to t('application.create'), new_director_path, class: "btn btn-primary"
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th t('activerecord.attributes.director.first_name')
+      %th t('activerecord.attributes.director.last_name')
+      %th
+      %th
+      %th
+
+  %tbody
+    - @directors.each do |director|
+      %tr
+        %td= director.first_name
+        %td= director.last_name
+        %td= link_to t('application.show'), director, class: "btn btn-info"
+        %td= link_to t('application.edit'), edit_director_path(director), class: "btn btn-success"
+        %td= link_to t('application.delete'), director, method: :delete, class: "btn btn-danger"
+
