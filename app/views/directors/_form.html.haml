@@ -1,16 +1,26 @@
-= form_for @director do |f|
-  - if @director.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@director.errors.count, "error")} prohibited this director from being saved:"
-      %ul
-        - @director.errors.full_messages.each do |message|
-          %li= message
+=form_for @director, validate: true do |f|
+  -if @director.errors.any?
+    .card.mx-4
+      .card-body
+        %div{style: 'color: red'}
+          %h2
+            = t('application.can_not_be_saved')
+          %ul
+            - @director.errors.full_messages.each do |msg|
+              %li= msg
 
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .actions
-    = f.submit 'Save'
+  .form-group.mx-4
+    = f.label :first_name, class: "form-label required"
+    .div.w-25
+      = f.text_field :first_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :last_name, class: "form-label required"
+    .div.w-25
+      = f.text_field :last_name, autofocus: true, class: "form-control"
+
+  .row.mt-4
+    .offset-3.col-3
+      = link_to t('application.back'), directors_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"
