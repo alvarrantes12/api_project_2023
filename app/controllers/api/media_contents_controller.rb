@@ -17,6 +17,7 @@ module Api
 
     def create
       @media_content = MediaContent.new(media_content_params)
+      
       if @media_content.save
         render 'api/media_contents/show', status: :created 
       else
