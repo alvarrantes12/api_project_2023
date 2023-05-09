@@ -10,6 +10,8 @@
         = t('activerecord.attributes.director.last_name')
       %p.card-text= @director.last_name  
 
-= link_to t('application.edit), edit_director_path(@director), class: "btn btn-success"
-\|
-= link_to t('application.back), directors_path, class: "btn btn-success"
+.row.mt-4
+  offset-3.col-3
+    = link_to t('application.back), directors_path, class: "btn btn-secondary"
+  .col-3
+    = link_to t('application.edit), edit_director_path(@director), class: "btn btn-success"
