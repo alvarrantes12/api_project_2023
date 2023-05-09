@@ -14,7 +14,7 @@ es:
     deleted: Eliminado exitosamente
     back: Atrás
     select: Seleccione
-    can_not_be_saved: No puede ser guardado
+    can_not_be_saved: No se pudo guardar
   activerecord:
     attributes:
       director:

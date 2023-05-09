@@ -14,6 +14,8 @@ gem "jbuilder"
 gem 'jquery-rails'
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "rack-cors"
+gem "rubocop", "~> 1.18", require: false
 gem 'sass-rails'
 gem "sprockets-rails"
 gem "stimulus-rails"
@@ -25,7 +27,6 @@ group :development, :test do
   gem "haml-rails"
   gem "html2haml"
   gem 'rspec-rails'
-  gem 'rubocop', require: false
 end
 
 group :development do
