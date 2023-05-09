@@ -38,9 +38,9 @@ es:
         director:
           attributes:
             first_name:
-              blank: "no puede estar en blanco"
-              too_short: "debe de tener minimo 3 caracteres"
+              blank: no puede estar en blanco
+              too_short: debe de tener minimo 3 caracteres
             last_name:
-              blank: "no puede estar en blanco"
-              too_short: "debe de tener minimo 3 caracteres"
-              too_long: "debe de tener máximo 10 caracteres"
+              blank: no puede estar en blanco
+              too_short: debe de tener minimo 3 caracteres
+              too_long: debe de tener máximo 10 caracteres
