@@ -12,6 +12,7 @@ es:
     delete: Eliminar
     create: crear
     cruds_available: CRUDS disponibles
+    change_crud: Cambiar al crud disponible
     can_not_be_saved: No se pudo guardar
     select: Seleccione
     back: Atrás
