@@ -1,7 +1,3 @@
-%h1 Editing director
+%h1= t('application.editing_model', model: t('activerecord.modules.director.one'))
 
-= render 'form'
-
-= link_to 'Show', @director
-\|
-= link_to 'Back', directors_path
+= render "form", director: @director

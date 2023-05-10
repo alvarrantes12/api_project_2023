@@ -16,26 +16,24 @@ class DirectorsController < ApplicationController
   def create
     @director = Director.new(director_params)
 
-      if @director.save
-        redirect_to director_url(@director), notice: "Director was successfully created." 
-      else
-        render :new, status: :unprocessable_entity 
+    if @director.save
+      redirect_to director_url(@director), notice: t('application.created')
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
   def update
-      if @director.update(director_params)
-        redirect_to director_url(@director), notice: "Director was successfully updated."
-      else
-        render :edit, status: :unprocessable_entity
-      end
+    if @director.update(director_params)
+      redirect_to director_url(@director), notice: t('application.updated')
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @director.destroy
-
-     redirect_to directors_url, notice: "Director was successfully destroyed."
-    end
+    redirect_to directors_url, notice: t('application.destroyed')
   end
 
   private

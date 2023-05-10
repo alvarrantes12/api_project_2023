@@ -22,4 +22,4 @@
         %td= director.last_name
         %td= link_to t('application.show'), director, class: "btn btn-info"
         %td= link_to t('application.edit'), edit_director_path(director), class: "btn btn-success"
-        %td= link_to t('application.delete'), director, method: :delete, class: "btn btn-danger"
+        %td= button_to t('application.delete'), director, method: :delete, class: "btn btn-danger"
